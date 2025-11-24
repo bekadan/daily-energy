@@ -1,4 +1,8 @@
+import {ModalsProvider} from "@mantine/modals";
+import { MantineProvider } from "@mantine/core";
+import {Notifications} from "@mantine/notifications";
 import type { Metadata } from "next";
+import Layout from "from/components/Layout";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <MantineProvider>
+          <ModalsProvider/>
+          <Notifications/>
+          <Layout>{children}</Layout>
+        </MantineProvider>
       </body>
     </html>
   );
