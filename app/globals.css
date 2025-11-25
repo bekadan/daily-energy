@@ -8,3 +8,19 @@
   padding: 0;
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+.header-menu-item {
+  color: #1d1d1d;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+
+.header-menu-item:hover,
+.header-menu-item.active {
+  border-bottom: 2px solid #ffcd00;
+}

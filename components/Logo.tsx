@@ -1,8 +1,8 @@
-import { Flex, Image } from "@mantine/core";
+import { Flex, FlexProps, Image } from "@mantine/core";
 
-const Logo: React.FC<{ href?: string }> = ({ href }) => {
+const Logo: React.FC<{ href?: string } & FlexProps> = ({ href, ...props }) => {
   return (
-    <Flex component="a" href={href ? href : "/"}>
+    <Flex component="a" {...props} href={href ? href : "/"}>
       <Image src={"/logo.svg"} w={"auto"} h={32} />
     </Flex>
   );
