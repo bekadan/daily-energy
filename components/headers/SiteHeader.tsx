@@ -3,6 +3,7 @@
 import { Container, Flex } from "@mantine/core";
 import Logo from "from/components/Logo";
 import HeaderMenuItem from "./HeaderMenuItem";
+import OutlineButton from "from/ui/buttons/OutlineButton";
 
 const SiteHeader = () => {
   return (
@@ -13,6 +14,7 @@ const SiteHeader = () => {
           <HeaderMenuItem item={{ title: "Find a Job", href: "/" }} />
           <HeaderMenuItem item={{ title: "Find a Company", href: "/" }} />
         </Flex>
+        <OutlineButton buttonstyle="normal">For Employers</OutlineButton>
       </Flex>
     </Container>
   );

@@ -2,7 +2,7 @@ import { Button, ButtonProps } from "@mantine/core";
 import { forwardRef } from "react";
 
 interface OutlineButtonProps extends ButtonProps {
-  buttonStyle: "black" | "normal";
+  buttonstyle: "black" | "normal";
 }
 
 const OutlineButton = forwardRef<HTMLButtonElement, OutlineButtonProps>(
@@ -10,7 +10,7 @@ const OutlineButton = forwardRef<HTMLButtonElement, OutlineButtonProps>(
     return (
       <Button
         variant="outline"
-        color={props.buttonStyle === "black" ? "#1d1d1d" : "#FF9F14"}
+        color={props.buttonstyle === "black" ? "#1d1d1d" : "#FF9F14"}
         c={"#1d1d1d"}
         ref={ref}
         {...props}

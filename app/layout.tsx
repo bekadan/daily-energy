@@ -1,6 +1,6 @@
-import {ModalsProvider} from "@mantine/modals";
+import { ModalsProvider } from "@mantine/modals";
 import { MantineProvider } from "@mantine/core";
-import {Notifications} from "@mantine/notifications";
+import { Notifications } from "@mantine/notifications";
 import type { Metadata } from "next";
 import Layout from "from/components/Layout";
 import "./globals.css";
@@ -18,9 +18,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <MantineProvider>
-          <ModalsProvider/>
-          <Notifications/>
+        <MantineProvider
+          theme={{
+            fontSizes: {
+              xl: "14px",
+              lg: "14px",
+              md: "14px",
+              sm: "14px",
+              xs: "14px",
+            },
+          }}
+        >
+          <ModalsProvider />
+          <Notifications />
           <Layout>{children}</Layout>
         </MantineProvider>
       </body>
